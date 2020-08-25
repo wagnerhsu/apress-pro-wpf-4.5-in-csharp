@@ -1,1 +1,0 @@
-D:\Code\Pro WPF\Chapter22\DataBinding\bin\Debug\DataBinding.exe.config

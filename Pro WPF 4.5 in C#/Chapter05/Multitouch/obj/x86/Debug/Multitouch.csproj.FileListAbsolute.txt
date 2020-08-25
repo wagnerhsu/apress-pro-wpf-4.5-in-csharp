@@ -1,1 +1,0 @@
-D:\Code\Pro WPF\Chapter05\Multitouch\bin\Debug\Multitouch.exe.config

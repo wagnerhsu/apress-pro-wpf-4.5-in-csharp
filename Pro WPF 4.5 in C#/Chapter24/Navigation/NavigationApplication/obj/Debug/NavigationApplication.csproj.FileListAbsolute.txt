@@ -1,1 +1,0 @@
-D:\Code\Pro WPF\Chapter24\Navigation\NavigationApplication\bin\Debug\NavigationApplication.exe.config

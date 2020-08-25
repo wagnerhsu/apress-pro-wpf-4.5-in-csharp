@@ -1,1 +1,0 @@
-D:\Code\Pro WPF\Chapter07\SingleInstanceApplication\bin\Debug\SingleInstanceApplication.exe.config

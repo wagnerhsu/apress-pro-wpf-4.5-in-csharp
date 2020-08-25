@@ -1,1 +1,0 @@
-D:\Code\Pro WPF\Chapter05\RoutedEvents\bin\Debug\RoutedEvents.exe.config
