@@ -1,16 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Data;
-using System.Data.SqlClient;
-using System.ComponentModel;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Linq;
 
 namespace StoreDatabase
 {
-	public class StoreDb
-	{
+    public class StoreDb
+    {
         public Product GetProduct(int ID)
         {
             DataSet ds = StoreDbDataSet.ReadDataSet();
@@ -18,12 +15,12 @@ namespace StoreDatabase
             Product product = new Product((string)productRow["ModelNumber"],
                     (string)productRow["ModelName"], (decimal)productRow["UnitCost"],
                     (string)productRow["Description"], (int)productRow["CategoryID"],
-                    (string)productRow["CategoryName"], (string)productRow["ProductImage"]);            
+                    (string)productRow["CategoryName"], (string)productRow["ProductImage"]);
             return product;
         }
 
-		public ICollection<Product> GetProducts()
-		{
+        public ICollection<Product> GetProducts()
+        {
             DataSet ds = StoreDbDataSet.ReadDataSet();
 
             ObservableCollection<Product> products = new ObservableCollection<Product>();
@@ -34,8 +31,8 @@ namespace StoreDatabase
                     (string)productRow["Description"], (int)productRow["CategoryID"],
                     (string)productRow["CategoryName"], (string)productRow["ProductImage"]));
             }
-			return products;
-		}
+            return products;
+        }
 
         public ICollection<Product> GetProductsSlow()
         {
@@ -78,7 +75,7 @@ namespace StoreDatabase
 
         public ICollection<Category> GetCategories()
         {
-            DataSet ds = StoreDbDataSet.ReadDataSet();                       
+            DataSet ds = StoreDbDataSet.ReadDataSet();
 
             ObservableCollection<Category> categories = new ObservableCollection<Category>();
             foreach (DataRow categoryRow in ds.Tables["Categories"].Rows)
@@ -87,6 +84,5 @@ namespace StoreDatabase
             }
             return categories;
         }
-	}
-
+    }
 }
