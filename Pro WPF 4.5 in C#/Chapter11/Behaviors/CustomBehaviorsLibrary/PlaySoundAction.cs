@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Net;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using i=System.Windows.Interactivity;
-using System.Windows.Interactivity;
-using System.Windows.Controls.Primitives;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
+using System.Windows.Interactivity;
+using System.Windows.Media;
+using System.Windows.Shapes;
+using i = System.Windows.Interactivity;
 
 namespace CustomBehaviorsLibrary
 {
@@ -54,7 +49,7 @@ namespace CustomBehaviorsLibrary
 
                 // Add the MediaElement and begin playback.                
                 container.Children.Add(media);
-                
+
             }
         }
 

@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Net;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Ink;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
 using System.Windows.Interactivity;
+using System.Windows.Media.Animation;
 
 namespace CustomBehaviorsLibrary
 {
@@ -37,10 +30,10 @@ namespace CustomBehaviorsLibrary
         {
             // Make sure the storyboard isn't already running.
             fadeStoryboard.Stop();
-            
+
             // Set up the storyboard.            
             Storyboard.SetTargetProperty(fadeAnimation, new PropertyPath("Opacity"));
-            Storyboard.SetTarget(fadeAnimation, this.Target);            
+            Storyboard.SetTarget(fadeAnimation, this.Target);
 
             // Set up the animation.
             // It's important to do this at the last possible instant,
@@ -67,7 +60,7 @@ namespace CustomBehaviorsLibrary
 
         private Storyboard fadeStoryboard = new Storyboard();
         private DoubleAnimation fadeAnimation = new DoubleAnimation();
-                
+
         public FadeInAction()
         {
             fadeStoryboard.Children.Add(fadeAnimation);
@@ -81,7 +74,7 @@ namespace CustomBehaviorsLibrary
             // Set up the storyboard.                        
             Storyboard.SetTargetProperty(fadeAnimation, new PropertyPath("Opacity"));
             Storyboard.SetTarget(fadeAnimation, this.Target);
-            
+
             // Set up the animation.            
             fadeAnimation.To = 1;
             fadeAnimation.Duration = Duration;
