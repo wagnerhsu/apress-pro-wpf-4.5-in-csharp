@@ -4,14 +4,14 @@
     Title="Menu" Height="321" Width="244"
     >
     <Grid>
-      <StackPanel Margin="5" Button.Click="ButtonClick">
+        <StackPanel Margin="5" Button.Click="ButtonClick">
 
-        <Button>ElementToElementBinding</Button>
-        <Button>MultipleBindings</Button>                
-        <Button>BindToFont</Button>
-        <Button>FontChooser</Button>
+            <Button>ElementToElementBinding</Button>
+            <Button>MultipleBindings</Button>
+            <Button>BindToFont</Button>
+            <Button>FontChooser</Button>
 
-      </StackPanel>
-        
+        </StackPanel>
+
     </Grid>
 </Window>
