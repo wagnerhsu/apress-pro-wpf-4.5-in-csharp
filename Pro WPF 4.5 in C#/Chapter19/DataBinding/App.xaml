@@ -4,6 +4,6 @@
     StartupUri="Menu.xaml"
     >
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
