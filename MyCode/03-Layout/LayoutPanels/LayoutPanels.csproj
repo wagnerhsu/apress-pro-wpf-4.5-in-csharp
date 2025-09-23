@@ -1,7 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <OutputType>WinExe</OutputType>
   </PropertyGroup>
+  <ItemGroup>
+    <!-- Remove MyApp.xaml from generic Page items so it can be the ApplicationDefinition -->
+    <Page Remove="MyApp.xaml" />
+    <ApplicationDefinition Include="MyApp.xaml" />
+  </ItemGroup>
 </Project>

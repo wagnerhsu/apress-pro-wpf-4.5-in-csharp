@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Windows;
 using System.Collections.ObjectModel;
-using System.Windows.Shell;
 using System.IO;
 using System.Reflection;
+using System.Windows.Shell;
 
 namespace JumpListApplicationTask
 {
@@ -57,29 +56,31 @@ namespace JumpListApplicationTask
             base.OnStartup(e);
 
             // Retrieve the current jump list.
-            JumpList jumpList = new JumpList();
-            JumpList.SetJumpList(Application.Current, jumpList);
+            var jumpList = new JumpList();
+            JumpList.SetJumpList(System.Windows.Application.Current, jumpList);
 
             // Add a new JumpPath for an application task.            
-            JumpTask jumpTask = new JumpTask();
-            jumpTask.CustomCategory = "Tasks";
-            jumpTask.Title = "Do Something";
-            jumpTask.ApplicationPath = Assembly.GetExecutingAssembly().Location;
-            jumpTask.IconResourcePath = jumpTask.ApplicationPath;
-            jumpTask.Arguments = "@#StartOrder";
+            var jumpTask = new JumpTask
+            {
+                CustomCategory = "Tasks",
+                Title = "Do Something",
+                ApplicationPath = Assembly.GetExecutingAssembly().Location,
+                IconResourcePath = Assembly.GetExecutingAssembly().Location,
+                Arguments = "@#StartOrder"
+            };
             jumpList.JumpItems.Add(jumpTask);         
 
             // Update the jump list.
             jumpList.Apply();
 
             // Load the main window.
-            Window1 win = new Window1();
+            var win = new Window1();
             win.Show();
         }               
 
         public void ProcessMessage(string message)
         {
-            MessageBox.Show("Message " + message + " received.");
+            System.Windows.MessageBox.Show("Message " + message + " received.");
         }
     }   
 }
