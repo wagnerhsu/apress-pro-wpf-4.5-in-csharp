@@ -18,23 +18,21 @@ namespace Commands
 
     public partial class CustomCommand : System.Windows.Window
     {
-
         public CustomCommand()
         {
             InitializeComponent();
         }
 
-
         private void RequeryCommand(object sender, ExecutedRoutedEventArgs e)
         {
             MessageBox.Show("Requery");
         }
-
     }
 
     public class DataCommands
     {
         private static RoutedUICommand requery;
+
         static DataCommands()
         {
             InputGestureCollection inputs = new InputGestureCollection();
@@ -42,11 +40,10 @@ namespace Commands
             requery = new RoutedUICommand(
               "Requery", "Requery", typeof(DataCommands), inputs);
         }
-         
+
         public static RoutedUICommand Requery
         {
             get { return requery; }
         }
     }
-
 }
